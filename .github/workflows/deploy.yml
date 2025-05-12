@@ -26,4 +26,4 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          sshpass -p "${{ secrets.SSH_USER_PASSWORD }}" rsync -av -e "ssh -o StrictHostKeyChecking=no -p 20007" ./docs/.vitepress/dist/ ${{ secrets.SSH_USER_NAME }}@${{ secrets.SERVER_NAME }}:/home/html/bobici.info/jirizejda.cz/public_html/cscod
+          sshpass -p "${{ secrets.SSH_USER_PASSWORD }}" rsync -av -e "ssh -o StrictHostKeyChecking=no -p 20007" ./docs/.vitepress/dist/ ${{ secrets.SSH_USER_NAME }}@${{ secrets.SSH_SERVER_NAME }}:/home/html/bobici.info/jirizejda.cz/public_html/cscod
