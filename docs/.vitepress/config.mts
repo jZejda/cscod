@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   locales: {
     en: {
-      base: '/cscod/',
       label: 'English',
       lang: 'en-US',
       link: '/en/',
@@ -78,7 +77,6 @@ export default defineConfig({
       }
     },
     'cz': {
-      base: '/cscod/',
       label: 'Čeština',
       lang: 'cs-CZ',
       link: '/cz/',
@@ -207,6 +205,8 @@ export default defineConfig({
   build: {
     // If you need special build options
   },
+
+  base: '/cscod/',
 
   // Head tags to include in HTML
   head: [
