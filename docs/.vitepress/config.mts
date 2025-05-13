@@ -15,7 +15,7 @@ export default defineConfig({
         },
         nav: [
           { text: 'Home', link: '/en/docs/integrations/upgates' },
-          { text: 'API', link: '/en/apiv1/create' }
+          { text: 'API', link: '/en/apiv1/index' }
         ],
         sidebar: {
           // This sidebar gets displayed when a user
@@ -65,9 +65,9 @@ export default defineConfig({
                   ]
                 },
                 {
-                  text: 'Offers',
+                  text: 'How To',
                   items: [
-                    { text: 'Offer Show', link: '/en/apiv1/create' },
+                    { text: 'Order own print label', link: '/en/apiv1/howto/print-label' },
                   ]
                 },
               ]
@@ -76,7 +76,7 @@ export default defineConfig({
         },
       }
     },
-    'cz': {
+    root: {
       label: 'Čeština',
       lang: 'cs-CZ',
       link: '/cz/',
@@ -88,7 +88,7 @@ export default defineConfig({
         },
         nav: [
           { text: 'Domů', link: '/cz/docs/integrations/upgates' },
-          { text: 'API', link: '/cz/apiv1/create' }
+          { text: 'API', link: '/cz/apiv1/index' }
         ],
         sidebar: {
           // This sidebar gets displayed when a user
@@ -138,9 +138,9 @@ export default defineConfig({
                   ]
                 },
                 {
-                  text: 'Nabídky',
+                  text: 'Jak na to',
                   items: [
-                    { text: 'Zobrazení nabídky', link: '/cz/apiv1/create' },
+                    { text: 'Vlastní tisk štítků', link: '/cz/apiv1/howto/print-label' },
                   ]
                 },
               ]
