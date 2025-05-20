@@ -19,9 +19,9 @@ lastUpdated: true
 
 ## Typ svozu
 
-Pokud si přeje klient vlastní tisk štítků, kterými balíky sám polepí a následně v jednorázové nebo pravidelné objednávce svozu kurýrovy předá, je potřeba zvolit typ `OCCASIONAL`.
+Pokud si přeje klient **vlastní tisk štítků**, kterými balíky sám polepí a následně v jednorázové nebo pravidelné objednávce svozu kurýrovy předá, je potřeba zvolit **typ** `OCCASIONAL`.
 
-U jednorázové objednávky je používán typ `ONDEMAND`. Značí jednorázovou objednávku z adresy, která nemusí být smluvní. Kurýr na tuto adresu přijede s připraveným štítkem, tímto opatří přepravovaný balík.
+U jednorázové objednávky je používán **typ** `ONDEMAND`. Značí jednorázovou objednávku z adresy, která nemusí být smluvní. Kurýr na tuto adresu přijede s připraveným štítkem, tímto opatří přepravovaný balík.
 
 ---
 
@@ -33,7 +33,7 @@ U jednorázové objednávky je používán typ `ONDEMAND`. Značí jednorázovou
     - na adrese může být naplánován pravidelný svoz
 - zákazník musí mít aktivní smlouvu s možností platby na fakturu
   
-::: warning 💡 VYTVOŘENÍ OBJEDNÁVKY
+::: warning 💡 Vytvoření objednávky
 **Při volání metody `create` je pak potřeba uvést právě tyto parametry:**
 
 - platba na fakturu
@@ -54,8 +54,11 @@ Do API volání je nutné použít uvedené **ID svozové adresy** a textové oz
 
 ### Export zásilek ze svozové adresy s vlastním tiskem štítků
 
-::: details Příklad `json` objektu volání order create s vlastním tiskem stítku {open}
-```json
+Příklad `json` objektu volání order create s vlastním tiskem stítku
+
+::: code-group
+
+```json [EXAMPLE]
 {
   "payment_type": "INVOICE", // [!code highlight] [!code focus]
   "currency": "CZK",
@@ -83,6 +86,95 @@ Do API volání je nutné použít uvedené **ID svozové adresy** a textové oz
   ],
 }
 ```
+
+```php [REQUEST]
+curl -v https://www.zaslat.cz/api/v1/shipments/create \
+-X "POST" \
+-H "Accept: application/json" \
+-H "Content-Type: application/json" \
+-H "X-ApiKey: secret-api-key" \
+-d '{
+        "currency": "CZK",
+        "payment_type": "INVOICE",
+        "shipments": [{
+            "carrier": "GLS",
+            "pickup_date": 2016-07-11,
+            "from": {
+                "id": 123654
+            },
+            "to": {
+                "firstname": "Jaroslav",
+                "surname": "Novotný",
+                "company": "Zaslat s.r.o.",
+                "street": "Jindřišská 12/1027",
+                "city": "Praha 4",
+                "zip": "14000",
+                "country": "CZ",
+                "phone": "+420777152225",
+                "email": "novotny@dummymail.com"
+            },
+            "services": [{
+                "code": "cod",
+                "data": {
+                    "value": {
+                        "value": 1500,
+                        "currency": "CZK"
+                    }
+                }
+            }, {
+                "code": "ins",
+                "data": {
+                    "value": 12500,
+                    "currency": "CZK"
+                }
+            }],
+            "packages": [{
+                "weight": 1,
+                "width": 10,
+                "height": 20,
+                "length": 30
+            }, {
+                ... druhý balík ...
+            }]
+        }, {
+            ... druhá zásilka ...
+        }],
+        "payer": {
+                "firstname": "Miroslav",
+                "surname": "Novotný",
+                "company": "Zaslat s.r.o.",
+                "tin": "00000000"
+                "vatin": "CZ00000000"
+                "street": "Jindřišská 12/1027",
+                "city": "Praha 4",
+                "zip": "14000",
+                "country": "CZ",
+                "phone": "+420777152225",
+                "email": "novotny@dummymail.com"
+            }
+    }'
+```
+
+```json [RESPONSE-200]
+{
+        "status": 200,
+        "message": "Order was successfully created",
+        "data": {
+            "order": "2eb6987.............5c0f41bfd",
+            "order_number": "OP23100000X",
+            "shipments": [
+                "IZ0123456789",
+                "IZ1234567890"
+            ]
+        }
+    }
+
+    {
+        "status": 401,
+        "message": "You are not allowed to use invoice payment method"
+    }
+```
+
 :::
 
 **Nutné údaje volání metody create**
