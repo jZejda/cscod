@@ -40,11 +40,13 @@ Navštivte webové stránky Upgates na následující adrese:[**https://doplnky.
 
 Dostanete se na stránku pluginu Zaslat, který si nyní aktivujte (Obr. 1).
 
+![Karta pluginu Zaslat v Upgates](images/upGates-install-step1.png)
 
 _Obrázek 1: Karta pluginu Zaslat v Upgates_
 
 Plugin Zaslat se vám nahraje přímo do administrace doplňků ve vašem e-shopu od Upgates. Tady opět klikněte na tlačítko Aktivovat (Obr. 2).
 
+![Odsouhlaseni instalace](images/upGates-install-step2.png)
 
 ## **Nastavení v Zaslat**
 
