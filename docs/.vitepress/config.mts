@@ -26,9 +26,6 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Upgates', link: '/en/docs/integrations/upgates' },
-                { text: 'EshopRychle', link: '/en/docs/integrations/eshop-rychle' },
-                { text: 'Prestashop', link: '/en/docs/integrations/prestashop' },
-                { text: 'Woocommerce', link: '/en/docs/integrations/woocommerce' },
               ]
             },
             {
@@ -100,8 +97,7 @@ export default defineConfig({
               items: [
                 { text: 'Upgates', link: '/cz/docs/integrations/upgates' },
                 { text: 'EshopRychle', link: '/cz/docs/integrations/eshop-rychle' },
-                { text: 'Prestashop', link: '/cz/docs/integrations/prestashop' },
-                { text: 'Woocommerce', link: '/cz/docs/integrations/woocommerce' },
+                { text: 'Import', link: '/cz/docs/integrations/import' },
               ]
             },
             {
