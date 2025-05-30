@@ -25,9 +25,11 @@ lastUpdated: true
 V případě zásilek s dopravce Balíkovna, musíte v import souboru dodžet následující pravidla:
  - sloupec `carrier` obsahuje kod `balikovna`
 
+::: tip TIP
 U **Balíkovny** musíte specifikovat jak podací tak výdejní místo. Toto je podmínka pro vytvoření nabídky dopravy. Importní soubor tedy bude obsahovat minimálně tyto dva sloupce specifikující **podací** a **výdejní** místo **Balikovny**:
  - `pickup_branch_code`  - může obsahovat jakýkoliv kód, je jedno kam je zásilka odnesena ale musí to být kód balíkovny
  - `delivery_branch_code` - kód místa pro vyzvednutí
+:::
 
 Sloupce zásilek obsahují kody podacích výdejních míst balíkovny.
 

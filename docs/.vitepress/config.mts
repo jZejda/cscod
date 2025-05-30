@@ -92,12 +92,13 @@ export default defineConfig({
           // is on `guide` directory.
           '/cz/docs/': [
             {
-              text: 'Ecom integrace',
+              text: 'E-com integrace',
               collapsed: true,
               items: [
                 { text: 'Upgates', link: '/cz/docs/integrations/upgates' },
                 { text: 'EshopRychle', link: '/cz/docs/integrations/eshop-rychle' },
                 { text: 'Import', link: '/cz/docs/integrations/import' },
+                { text: 'Připravujeme', link: '/cz/docs/integrations/pripravujeme' },
               ]
             },
             {
@@ -209,6 +210,12 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { property: 'og:title', content: 'My Awesome Website' }],
+    ['meta', { property: 'og:type', content: 'My Awesome Website' }],
+    ['meta', { property: 'og:url', content: 'My Awesome Website' }],
+    ['meta', { property: 'og:image', content: 'My Awesome Website' }],
+    ['meta', { property: 'og:og:description', content: 'My Awesome Website' }],
+    ['meta', { property: 'og:site_name', content: 'My Awesome Website' }]
   ]
 })
