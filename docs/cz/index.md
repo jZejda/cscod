@@ -4,21 +4,21 @@ layout: home
 
 hero:
   name: "Zaslat Awesome"
-  text: "Best FAQ"
-  tagline: My great project tagline
+  text: "Nejlepší Zaslat FAQ =)"
+  tagline: Nejlepší dokumentace ever
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Zační prozkoumávat zde
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: API dokumentace
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Přehledná
+    details: Dokumentace jen toho co potřebujete. Aktuální a vždy po ruce
+  - title: Multijazyčná
+    details: Umíme více jazyků, nejste čech nevadí :-)  
+  - title: Užitečná
+    details: Příklady jak impolementovat, jak nastavit. Co musím udělat když.
 ---

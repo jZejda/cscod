@@ -39,7 +39,7 @@ export default defineConfig({
                   ]
                 },
                 {
-                  text: 'MZ',
+                  text: 'Package Manager',
                   items: [
                     { text: 'Not show login', link: '/en/docs/faq/mz/login-page' },
                   ]
@@ -84,7 +84,7 @@ export default defineConfig({
           label: 'Na této stránce'
         },
         nav: [
-          { text: 'Domů', link: '/cz/docs/integrations/upgates' },
+          { text: 'Domů', link: '/cz/docs/integrations/index' },
           { text: 'API', link: '/cz/apiv1/index' }
         ],
         sidebar: {
@@ -92,11 +92,17 @@ export default defineConfig({
           // is on `guide` directory.
           '/cz/docs/': [
             {
+              text: 'Začínáme',
+              collapsed: true,
+              items: [
+                { text: 'Úvod', link: '/cz/docs/integrations/index' },
+              ]
+            },
+            {
               text: 'E-com integrace',
               collapsed: true,
               items: [
                 { text: 'Upgates', link: '/cz/docs/integrations/upgates' },
-                { text: 'EshopRychle', link: '/cz/docs/integrations/eshop-rychle' },
                 { text: 'Import', link: '/cz/docs/integrations/import' },
                 { text: 'Připravujeme', link: '/cz/docs/integrations/pripravujeme' },
               ]
@@ -112,7 +118,7 @@ export default defineConfig({
                   ]
                 },
                 {
-                  text: 'MZ',
+                  text: 'Manažér zásilek',
                   items: [
                     { text: 'Nevidím přihlášení', link: '/cz/docs/faq/mz/login-page' },
                   ]

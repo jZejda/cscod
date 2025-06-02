@@ -21,7 +21,7 @@ outline: deep
 lastUpdated: true
 ---
 
-# UpGates eshop
+# UpGates eshop <Badge type="warning" text="verze 2" />
 
 ![Upgates eshop](../../../assets/docs/integrations/upgates-logo.png)
 
