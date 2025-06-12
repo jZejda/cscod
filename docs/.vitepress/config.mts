@@ -217,11 +217,11 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['meta', { property: 'og:title', content: 'My Awesome Website' }],
-    ['meta', { property: 'og:type', content: 'My Awesome Website' }],
-    ['meta', { property: 'og:url', content: 'My Awesome Website' }],
-    ['meta', { property: 'og:image', content: 'My Awesome Website' }],
-    ['meta', { property: 'og:og:description', content: 'My Awesome Website' }],
-    ['meta', { property: 'og:site_name', content: 'My Awesome Website' }]
+    ['meta', { property: 'og:title', content: 'Zaslat dokumentace' }],
+    ['meta', { property: 'og:description', content: 'Zaslat nejlepší dokumentace ever' }],
+    ['meta', { property: 'og:image', content: 'https://jirizejda.cz/cscod/og.png' }],
+    ['meta', { property: 'og:url', content: 'https://jirizejda.cz/cscod/cz/' }],
+    ['meta', { property: 'og:site_name', content: 'Zaslat dokumentace' }],
+    ['meta', { property: 'og:type', content: 'website' }]
   ]
 })
